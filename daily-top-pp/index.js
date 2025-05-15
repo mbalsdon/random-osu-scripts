@@ -45,7 +45,7 @@ async function getDailyBestPlay(mode, date) {
     while (true) {
         try {
             // Certain requests hang when I add limit parameter (&limit=X)
-            const response = await fetch(`https://osutrack-api.ameo.dev/bestplays?mode=${mode}&from=${date}&to=${incrementDate(date)}`);
+            const response = await fetch(`https://osutrack-api.ameo.dev/bestplays?mode=${mode}&from=${date}&to=${incrementDate(date)}&limit=1`);
             responseBody = await response.json();
             break;
         } catch (error) {
@@ -73,7 +73,7 @@ function findRecordPlays(allPlays) {
 //\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
 
 async function scrapeData() {
-    const start = "2007-10-05";
+    const start = "2007-12-05";
     const today = todayDate();
 
     const result = [];
@@ -81,7 +81,7 @@ async function scrapeData() {
         console.log(date);
         const score = await getDailyBestPlay(0, date);
         result.push(score);
-        await sleep(500);
+        // await sleep(500);
     }
 
     fs.writeFileSync("allplays.json", JSON.stringify(result), "utf8");

@@ -1,0 +1,21 @@
+- sample every 100? userid (6395000, 6395100, 6395200, etc), dump it all to database. can do alot with this
+-- 50 at a time: https://osu.ppy.sh/docs/#get-users
+
+
+- what are the most common beatmaps in players' top100? mods? mappers?
+--- look at each players' top100 and increment every time you see a beatmap / mod combination / mapper / etc.
+
+- pp spread in top 100 vs. rank
+--- for each xaxis entry (rank) we have a vertical "spread"; pp of 100th play & pp of 1st play
+
+- peak rank vs. current rank
+
+- (the classic) pp vs. rank
+
+- join date distribution (bar chart with each month)
+
+- something with badges
+
+- user id vs join date
+
+- how many players last seen within a month, a week, etc
