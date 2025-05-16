@@ -10,4 +10,4 @@ results.png
 
 .env
 client-credentials.json
-*_users_10k.json
+*users_*.json
