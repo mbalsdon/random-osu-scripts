@@ -1,0 +1,1 @@
+Fetches a subset of all users and saves to JSON. Run with `npm install && node index.js`
