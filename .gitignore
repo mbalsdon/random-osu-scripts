@@ -11,3 +11,5 @@ results.png
 .env
 client-credentials.json
 *users_*.json
+
+*user-bests_*.json
